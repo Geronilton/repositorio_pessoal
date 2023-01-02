@@ -15,7 +15,7 @@ public class Projeto_funcionario {
 
         f1.setNome("hugo");
         f1.setSalario(100);
-      //  f1.setrecebeaumento(50);
+        f1.setrecebeaumento(50);
     
 
     System.out.println("salario atual:" + f1.getSalario());
