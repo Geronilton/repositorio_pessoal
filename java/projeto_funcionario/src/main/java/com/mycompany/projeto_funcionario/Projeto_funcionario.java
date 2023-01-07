@@ -18,18 +18,22 @@ public class Projeto_funcionario {
         f1.setrecebeaumento(50);
     
 
-    System.out.println("salario atual:" + f1.getSalario());
-    System.out.println("ganho anual:" + f1.getcalculaganhoanual());
+        System.out.println("salario atual:" + f1.getSalario());
+        System.out.println("ganho anual:" + f1.getcalculaganhoanual());
     
         funcionario f2 = new funcionario ();
         
         f2.setNome("hugo");
         f2.setSalario(100);
+        f2.setrecebeaumento(50);
         
+        System.out.println("salario atual:" + f2.getSalario());
+        System.out.println("ganho anual:" + f2.getcalculaganhoanual());
+ 
         if (f1 == f2){
             System.out.println(" Iguais");
         }else{
-            System.out.println("Diferentes");
+           System.out.println("Diferentes");
         }
     }
 }

@@ -63,7 +63,7 @@ public funcionario (String nome){
         return salario*12;
     }
     public void setrecebeaumento (double aumento ){
-        this.salario = aumento;
+       this.salario=salario+aumento;
     }
     
     public double getrecebeaumento (){
