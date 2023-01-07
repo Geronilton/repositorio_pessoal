@@ -15,6 +15,14 @@ public class funcionario {
     String dataEntrada;
     String rg;
 
+    
+public funcionario (){
+
+}
+
+public funcionario (String nome){
+    this.nome=nome;
+}
     public void  mostra(){
         System.out.println("Nome" + this.nome);
         System.out.println("Salario" + this.salario);
