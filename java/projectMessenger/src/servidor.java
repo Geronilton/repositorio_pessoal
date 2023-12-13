@@ -46,7 +46,6 @@ public class servidor {
                     msgin = dis.readUTF();
                     System.out.println(msgin);
 
-                    // Enviar a mensagem recebida para todos os outros clientes
                     for (DataOutputStream dout : outputStreams) {
                         if (dout != null && dout != socket.getOutputStream()) {
                             dout.writeUTF(msgin);

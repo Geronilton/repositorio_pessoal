@@ -142,14 +142,13 @@ public class Cliente extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         username = usernameField.getText().trim();
         try {
         dout.writeUTF(username + " entrou no chat");
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-
-    // Adiciona uma mensagem na área de texto local informando que você entrou no chat
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     msg_area.setText("Você entrou no chat como: " + username + "\n");
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -188,20 +187,16 @@ public class Cliente extends javax.swing.JFrame {
         });
 
     try {
-        // Estabelece a conexão com o servidor na porta 1234 (mesma porta do servidor)
         s = new Socket("localhost", 1234);
 
-        // Inicializa os fluxos de entrada e saída
         din = new DataInputStream(s.getInputStream());
         dout = new DataOutputStream(s.getOutputStream());
 
-        // Thread para receber mensagens do servidor
         new Thread(() -> {
             try {
                 while (true) {
                     String msgin = din.readUTF();
                     if (msgin != null && !msgin.isEmpty()) {
-                        // Atualiza a área de texto com a mensagem recebida do servidor
                         msg_area.getDocument().insertString(msg_area.getDocument().getLength(), msgin + "\n", null);
 
                     }
